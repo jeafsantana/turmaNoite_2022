@@ -22,6 +22,13 @@ class ViewController: UIViewController {
         emailTextField.delegate = self
     }
     
+//    nome nao pode ser nulo (nil) e tb nao pode ser vazio ("")
+    func validaNome(string: String?) -> Bool {
+        guard let string = string else { return false }
+        
+        return string != ""
+    }
+    
     //cpf nao pode ser nulo (nil), nao pode ser vazio (""), precisa ser so numeros, e precisa ter 11 digitos
     //o telefone nao pode ser nulo(nil), nao pode ser vazio (""), precisa ser so numeros e precisa ter 11 digitos
     func validaCPFECelular(string: String?) -> Bool {
@@ -29,15 +36,37 @@ class ViewController: UIViewController {
         
         return string != "" && Int(string) != nil && string.count == 11
     }
+    
+    func validaEmail(string: String?) -> Bool {
+        guard let string = string else { return false }
+    
+        return string.contains("@")
+    }
+    
+    func atualizaBordaTextField(ehBordaVermelha: Bool, textField: UITextField) {
+        if ehBordaVermelha {
+            // pintar de vermelho
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = UIColor.red.cgColor
+        } else {
+            // pintar da cor padrao
+            textField.layer.borderWidth = 0
+            textField.layer.borderColor = UIColor.clear.cgColor
+        }
+    }
+    
 }
 
 extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == cpfTextField {
+            let ehNomeValido = validaNome(string: nomeTextField.text)
+            atualizaBordaTextField(ehBordaVermelha: !ehNomeValido, textField: nomeTextField)
+            
             // pra que eu possa digitar o meu cpf, o campo de nome tem que ter sido preenchido
             // entao, nome nao pode ser nulo (nil) e tb nao pode ser vazio ("")
-            if nomeTextField.text == nil || nomeTextField.text == "" {
+            if !ehNomeValido {
                 return false
             }
         }
@@ -57,8 +86,10 @@ extension ViewController: UITextFieldDelegate {
 //            }
             
             if validaCPFECelular(string: cpfTextField.text) == false {
+                atualizaBordaTextField(ehBordaVermelha: true, textField: cpfTextField)
                 return false
             }
+            atualizaBordaTextField(ehBordaVermelha: false, textField: cpfTextField)
         }
         
         if textField == emailTextField {
@@ -67,15 +98,24 @@ extension ViewController: UITextFieldDelegate {
             //entao, o telefone nao pode ser nulo(nil), nao pode ser vazio (""), precisa ser so numeros e precisa ter 11 digitos
             
             if validaCPFECelular(string: telefoneTextField.text) == false {
+                atualizaBordaTextField(ehBordaVermelha: true, textField: telefoneTextField)
                 return false
             }
+            atualizaBordaTextField(ehBordaVermelha: false, textField: telefoneTextField)
+
         }
-        
-        
         return true
     }
     
-    
-    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            if !validaEmail(string: textField.text) {
+                atualizaBordaTextField(ehBordaVermelha: true, textField: emailTextField)
+                return false
+            }
+            atualizaBordaTextField(ehBordaVermelha: false, textField: emailTextField)
+        }
+        return true
+    }
 }
 
