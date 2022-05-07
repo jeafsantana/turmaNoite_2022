@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="correcaoDatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kJK-pa-SFW">
+                                <rect key="frame" x="8" y="74" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-4r-RLA">
+                                <rect key="frame" x="8" y="123" width="398" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-mc-Qow">
+                                <rect key="frame" x="0.0" y="167" width="414" height="216"/>
+                                <connections>
+                                    <action selector="valorDoDatePickerMudou:" destination="BYZ-38-t0r" eventType="valueChanged" id="4wT-Co-vaj"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKU-dH-SCh">
+                                <rect key="frame" x="8" y="433" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eym-Cs-DkA">
+                                <rect key="frame" x="8" y="459" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kb-m7-oRJ">
+                                <rect key="frame" x="8" y="485" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Kb-m7-oRJ" secondAttribute="trailing" constant="8" id="03F-t3-3PR"/>
+                            <constraint firstItem="Eym-Cs-DkA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2hK-6y-DZQ"/>
+                            <constraint firstItem="0Kb-m7-oRJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="AuP-FA-2wh"/>
+                            <constraint firstItem="wRY-mc-Qow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HGd-0h-B0s"/>
+                            <constraint firstItem="FBg-4r-RLA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="JCd-13-QrS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FBg-4r-RLA" secondAttribute="trailing" constant="8" id="Of2-oU-eQh"/>
+                            <constraint firstItem="wRY-mc-Qow" firstAttribute="top" secondItem="FBg-4r-RLA" secondAttribute="bottom" constant="10" id="Peg-FQ-736"/>
+                            <constraint firstItem="kJK-pa-SFW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Qfs-U7-zo5"/>
+                            <constraint firstItem="kJK-pa-SFW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="U7X-jC-3fH"/>
+                            <constraint firstItem="0Kb-m7-oRJ" firstAttribute="top" secondItem="Eym-Cs-DkA" secondAttribute="bottom" constant="5" id="Ze9-DQ-kVd"/>
+                            <constraint firstItem="Eym-Cs-DkA" firstAttribute="top" secondItem="zKU-dH-SCh" secondAttribute="bottom" constant="5" id="b15-By-OHc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zKU-dH-SCh" secondAttribute="trailing" constant="8" id="evN-hf-bO8"/>
+                            <constraint firstItem="zKU-dH-SCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ohx-X5-B6q"/>
+                            <constraint firstItem="FBg-4r-RLA" firstAttribute="top" secondItem="kJK-pa-SFW" secondAttribute="bottom" constant="15" id="u9H-K8-E17"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eym-Cs-DkA" secondAttribute="trailing" constant="8" id="uoa-Cd-9hT"/>
+                            <constraint firstItem="zKU-dH-SCh" firstAttribute="top" secondItem="wRY-mc-Qow" secondAttribute="bottom" constant="50" id="xgR-Nb-KyJ"/>
+                            <constraint firstItem="wRY-mc-Qow" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xlg-2e-kVc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kJK-pa-SFW" secondAttribute="trailing" constant="8" id="xom-ti-tpl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataLabel" destination="0Kb-m7-oRJ" id="MnG-LS-cEb"/>
+                        <outlet property="datePicker" destination="wRY-mc-Qow" id="MZM-cb-0eW"/>
+                        <outlet property="nomeLabel" destination="zKU-dH-SCh" id="tnK-JP-TTt"/>
+                        <outlet property="nomeTextField" destination="kJK-pa-SFW" id="fml-sR-KcS"/>
+                        <outlet property="telefoneLabel" destination="Eym-Cs-DkA" id="rKz-mj-bHs"/>
+                        <outlet property="telefoneTextField" destination="FBg-4r-RLA" id="fjq-Cr-c1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
