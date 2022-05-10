@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="correcaoPickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAJ-5C-muk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfd-1e-4jl">
+                                <rect key="frame" x="20" y="325" width="82" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vv8-FQ-2lC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EO-e9-9B3">
+                                <rect key="frame" x="331" y="325" width="63" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar"/>
+                                <connections>
+                                    <action selector="iniciarAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V6F-fm-FWD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Horas, 0 min e 0 seg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAd-T2-jcT">
+                                <rect key="frame" x="50" y="360" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dfd-1e-4jl" firstAttribute="top" secondItem="dAJ-5C-muk" secondAttribute="bottom" constant="65" id="CN7-a9-SRX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4EO-e9-9B3" secondAttribute="trailing" constant="20" id="LXw-uK-6LE"/>
+                            <constraint firstItem="4EO-e9-9B3" firstAttribute="top" secondItem="dAJ-5C-muk" secondAttribute="bottom" constant="65" id="XAj-6A-zxI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uAd-T2-jcT" secondAttribute="trailing" constant="50" id="bbK-BX-4zL"/>
+                            <constraint firstItem="uAd-T2-jcT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hAt-rj-LPw"/>
+                            <constraint firstItem="dAJ-5C-muk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hJ5-Bf-tVG"/>
+                            <constraint firstItem="dfd-1e-4jl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jJZ-oA-1hl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAJ-5C-muk" secondAttribute="trailing" id="kmU-Yr-U1c"/>
+                            <constraint firstItem="uAd-T2-jcT" firstAttribute="top" secondItem="dAJ-5C-muk" secondAttribute="bottom" constant="100" id="pKF-9k-KNQ"/>
+                            <constraint firstItem="dAJ-5C-muk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wiJ-X5-2AD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cronometroPickerView" destination="dAJ-5C-muk" id="xOR-YA-LZ6"/>
+                        <outlet property="informacaoCronometroLabel" destination="uAd-T2-jcT" id="dug-sk-oDC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
