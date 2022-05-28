@@ -50,11 +50,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MultiplicacaoDelegate {
-   
-    func exibe(resultadoMultiplicacao: Int) {
-        resultadoLabel.text = "\(resultadoMultiplicacao)"
+    func exibe(resultadoMultiplicacao: String) {
+        resultadoLabel.text = resultadoMultiplicacao
     }
-    
-    
 }
 

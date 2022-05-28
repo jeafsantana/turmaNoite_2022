@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="aulaMVVM_parte2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="primeiro numero" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p7R-wk-Dej">
+                                <rect key="frame" x="10" y="64" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="segundo numero" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hE-f6-IHs">
+                                <rect key="frame" x="10" y="113" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exJ-ez-DLa">
+                                <rect key="frame" x="174" y="167" width="66" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Somar"/>
+                                <connections>
+                                    <action selector="somarButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bud-8h-Ibu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9H-79-4pX">
+                                <rect key="frame" x="10" y="298" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u9H-79-4pX" firstAttribute="top" secondItem="exJ-ez-DLa" secondAttribute="bottom" constant="100" id="2Lj-11-1jz"/>
+                            <constraint firstItem="1hE-f6-IHs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="E2b-Al-ZCL"/>
+                            <constraint firstItem="p7R-wk-Dej" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EGE-gH-EbO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hE-f6-IHs" secondAttribute="trailing" constant="10" id="Hey-hX-1Z7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u9H-79-4pX" secondAttribute="trailing" constant="10" id="MyW-rx-kmS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p7R-wk-Dej" secondAttribute="trailing" constant="10" id="UPM-rq-EXG"/>
+                            <constraint firstItem="p7R-wk-Dej" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="V0C-Qf-6dO"/>
+                            <constraint firstItem="1hE-f6-IHs" firstAttribute="top" secondItem="p7R-wk-Dej" secondAttribute="bottom" constant="15" id="axO-us-e3W"/>
+                            <constraint firstItem="exJ-ez-DLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bmW-Hv-6az"/>
+                            <constraint firstItem="exJ-ez-DLa" firstAttribute="top" secondItem="1hE-f6-IHs" secondAttribute="bottom" constant="20" id="hs8-4v-EqB"/>
+                            <constraint firstItem="u9H-79-4pX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mDT-E1-CT4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="primeiroNumeroTextField" destination="p7R-wk-Dej" id="SKN-kx-csM"/>
+                        <outlet property="resultadoLabel" destination="u9H-79-4pX" id="Jfc-lT-Chz"/>
+                        <outlet property="segundoNumeroTextField" destination="1hE-f6-IHs" id="BhR-BY-mOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

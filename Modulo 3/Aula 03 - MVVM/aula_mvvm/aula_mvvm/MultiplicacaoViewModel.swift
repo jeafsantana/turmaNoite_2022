@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MultiplicacaoDelegate {
-    func exibe(resultadoMultiplicacao: Int)
+    func exibe(resultadoMultiplicacao: String)
 }
 
 class MultiplicacaoViewModel {
@@ -22,7 +22,7 @@ class MultiplicacaoViewModel {
                
                 let resultadoMultiplicacao = primeiroElementoNumerico * segundoElementoNumerico
                 
-                delegate?.exibe(resultadoMultiplicacao: resultadoMultiplicacao)
+                delegate?.exibe(resultadoMultiplicacao: "\(resultadoMultiplicacao)")
                 
                 return
             }
