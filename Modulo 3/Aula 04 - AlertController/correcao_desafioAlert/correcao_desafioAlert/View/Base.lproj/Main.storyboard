@@ -60,11 +60,87 @@
                     </view>
                     <connections>
                         <outlet property="filmesTableView" destination="ezS-Em-vIl" id="J7k-hd-xSn"/>
+                        <segue destination="acZ-yd-DI9" kind="show" identifier="irParaDetalheDoFilme" id="wVR-3n-LBJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXd-2t-UIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-132" y="-63"/>
+        </scene>
+        <!--Detalhe Do Filme View Controller-->
+        <scene sceneID="yrA-TV-mSC">
+            <objects>
+                <viewController id="acZ-yd-DI9" customClass="DetalheDoFilmeViewController" customModule="correcao_desafioAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNK-kg-jYN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-is-AXM">
+                                <rect key="frame" x="123" y="79" width="168" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="O9l-Ax-7S7"/>
+                                    <constraint firstAttribute="height" constant="257" id="gOV-Yy-XJf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2a-ex-bEO">
+                                <rect key="frame" x="20" y="401" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUg-CB-dnZ">
+                                <rect key="frame" x="20" y="442" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf2-bF-n2b">
+                                <rect key="frame" x="20" y="483" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gd-Sc-onX">
+                                <rect key="frame" x="20" y="791" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Favoritar!"/>
+                                <connections>
+                                    <action selector="favoritoButtonAction:" destination="acZ-yd-DI9" eventType="touchUpInside" id="3LI-Ls-UOy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ubR-ZT-I7V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="c2a-ex-bEO" firstAttribute="top" secondItem="ubR-ZT-I7V" secondAttribute="top" constant="357" id="1Yh-FS-TAb"/>
+                            <constraint firstItem="ubR-ZT-I7V" firstAttribute="trailing" secondItem="c2a-ex-bEO" secondAttribute="trailing" constant="20" id="2W3-l9-Chj"/>
+                            <constraint firstItem="Rew-is-AXM" firstAttribute="leading" secondItem="ubR-ZT-I7V" secondAttribute="leading" constant="123" id="6Rl-yg-VgL"/>
+                            <constraint firstItem="Tf2-bF-n2b" firstAttribute="top" secondItem="aUg-CB-dnZ" secondAttribute="bottom" constant="20" id="6hO-Sv-SCH"/>
+                            <constraint firstItem="Tf2-bF-n2b" firstAttribute="leading" secondItem="ubR-ZT-I7V" secondAttribute="leading" constant="20" id="7wS-6u-VQE"/>
+                            <constraint firstItem="ubR-ZT-I7V" firstAttribute="trailing" secondItem="Rew-is-AXM" secondAttribute="trailing" constant="123" id="9MZ-Oq-W46"/>
+                            <constraint firstItem="5Gd-Sc-onX" firstAttribute="leading" secondItem="ubR-ZT-I7V" secondAttribute="leading" constant="20" id="BzN-a5-wi7"/>
+                            <constraint firstItem="ubR-ZT-I7V" firstAttribute="bottom" secondItem="5Gd-Sc-onX" secondAttribute="bottom" constant="20" id="Cus-62-fg8"/>
+                            <constraint firstItem="aUg-CB-dnZ" firstAttribute="leading" secondItem="ubR-ZT-I7V" secondAttribute="leading" constant="20" id="KiT-sj-a5C"/>
+                            <constraint firstItem="aUg-CB-dnZ" firstAttribute="top" secondItem="c2a-ex-bEO" secondAttribute="bottom" constant="20" id="O67-Jw-LYj"/>
+                            <constraint firstItem="ubR-ZT-I7V" firstAttribute="trailing" secondItem="aUg-CB-dnZ" secondAttribute="trailing" constant="20" id="fKE-S4-pLW"/>
+                            <constraint firstItem="ubR-ZT-I7V" firstAttribute="trailing" secondItem="Tf2-bF-n2b" secondAttribute="trailing" constant="20" id="jWb-OZ-bDV"/>
+                            <constraint firstItem="c2a-ex-bEO" firstAttribute="leading" secondItem="ubR-ZT-I7V" secondAttribute="leading" constant="20" id="l8W-rf-qMw"/>
+                            <constraint firstItem="Rew-is-AXM" firstAttribute="top" secondItem="ubR-ZT-I7V" secondAttribute="top" constant="35" id="otB-XC-37c"/>
+                            <constraint firstItem="ubR-ZT-I7V" firstAttribute="trailing" secondItem="5Gd-Sc-onX" secondAttribute="trailing" constant="20" id="xii-8B-bfR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CGg-r9-QL2"/>
+                    <connections>
+                        <outlet property="anoLabel" destination="aUg-CB-dnZ" id="yDh-El-Fgb"/>
+                        <outlet property="favoritoButton" destination="5Gd-Sc-onX" id="YKZ-cx-VAs"/>
+                        <outlet property="generoLabel" destination="Tf2-bF-n2b" id="dMU-Tu-PXS"/>
+                        <outlet property="nomeLabel" destination="c2a-ex-bEO" id="3Bd-rE-UPI"/>
+                        <outlet property="posterImageView" destination="Rew-is-AXM" id="4b7-gf-Vl4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wz3-md-6Hn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="-64"/>
         </scene>
     </scenes>
     <resources>

@@ -17,6 +17,8 @@ class FilmesViewModel {
     var delegate: FilmesViewModelDelegate?
     
     private var listaDeFilmes: [Filme] = []
+    private var listaDeFilmesFavoritos: [Filme] = []
+    
     private let service = Service()
         
     func buscaFilmes() {
@@ -36,4 +38,40 @@ class FilmesViewModel {
         return cellViewModel
     }
     
+    func getDetalheDoFilmeViewModel(posicao: Int?) -> DetalheDoFilmeViewModel? {
+        guard let posicao = posicao else { return nil }
+        
+        let filmeSelecionado = listaDeFilmes[posicao] // filme da jessica
+        
+        let ehFavorito = listaDeFilmesFavoritos.contains { filmeFavorito in
+            return filmeSelecionado.nome == filmeFavorito.nome
+        }
+        
+        let detalheDoFilmeViewModel = DetalheDoFilmeViewModel(filme: filmeSelecionado, ehFavorito: ehFavorito)
+        detalheDoFilmeViewModel.favoritoDelegate = self
+        
+        return detalheDoFilmeViewModel
+        
+        
+        //        if let posicao = posicao {
+        //            let filme = listaDeFilmes[posicao]
+        //            let detalheDoFilmeViewModel = DetalheDoFilmeViewModel(filme: filme)
+        //            return detalheDoFilmeViewModel
+        //        }
+        //
+        //        return nil
+    }
+    
+}
+
+extension FilmesViewModel: FavoritoDelegate {
+    func adicionarNosFavoritos(filme: Filme) {
+        listaDeFilmesFavoritos.append(filme)
+    }
+    
+    func removerDosFavoritos(filme: Filme) {
+        listaDeFilmesFavoritos.removeAll { filmeFavorito in
+            return filme.nome == filmeFavorito.nome
+        }
+    }
 }

@@ -17,9 +17,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.delegate = self
+        
+        filmesTableView.delegate = self
         filmesTableView.dataSource = self
         
         viewModel.buscaFilmes()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetalheDoFilmeViewController {
+            // let filme = sender as? Filme <- VM
+            
+            let posicaoSelecionada = sender as? Int
+            
+            destination.viewModel = viewModel.getDetalheDoFilmeViewModel(posicao: posicaoSelecionada)
+        }
+    }
+    
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let filme = listaDeFilmes[indexPath.row]
+        performSegue(withIdentifier: "irParaDetalheDoFilme", sender: indexPath.row)
     }
 }
 
