@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:PiadaSalva+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:PiadaSalva+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:coreData_revisao.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
