@@ -1,0 +1,6 @@
+framework module Pods_loginGoogle_aula {
+  umbrella header "Pods-loginGoogle_aula-umbrella.h"
+
+  export *
+  module * { export * }
+}

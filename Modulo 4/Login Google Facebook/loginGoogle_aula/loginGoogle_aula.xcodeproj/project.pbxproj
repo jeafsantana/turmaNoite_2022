@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12BD2C6440F79664F3514AF9 /* Pods_loginGoogle_aula.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA8378FE285A9E446557D63 /* Pods_loginGoogle_aula.framework */; };
+		E133591728821DC700BA6F81 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133591628821DC700BA6F81 /* LoginViewModel.swift */; };
+		E133591928821DD300BA6F81 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133591828821DD300BA6F81 /* LoginService.swift */; };
+		E1C5971E287F7D480091DF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5971D287F7D480091DF40 /* AppDelegate.swift */; };
+		E1C59720287F7D480091DF40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C5971F287F7D480091DF40 /* SceneDelegate.swift */; };
+		E1C59722287F7D480091DF40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C59721287F7D480091DF40 /* ViewController.swift */; };
+		E1C59725287F7D480091DF40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C59723287F7D480091DF40 /* Main.storyboard */; };
+		E1C59728287F7D480091DF40 /* loginGoogle_aula.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1C59726287F7D480091DF40 /* loginGoogle_aula.xcdatamodeld */; };
+		E1C5972A287F7D4F0091DF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1C59729287F7D4F0091DF40 /* Assets.xcassets */; };
+		E1C5972D287F7D4F0091DF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C5972B287F7D4F0091DF40 /* LaunchScreen.storyboard */; };
+		E1C59735287F83A30091DF40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1C59734287F83A30091DF40 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A0ED06040F113D481048AEA /* Pods-loginGoogle_aula.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginGoogle_aula.debug.xcconfig"; path = "Target Support Files/Pods-loginGoogle_aula/Pods-loginGoogle_aula.debug.xcconfig"; sourceTree = "<group>"; };
+		7331AA0F36D201A1DF8B5DFD /* Pods-loginGoogle_aula.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginGoogle_aula.release.xcconfig"; path = "Target Support Files/Pods-loginGoogle_aula/Pods-loginGoogle_aula.release.xcconfig"; sourceTree = "<group>"; };
+		AEA8378FE285A9E446557D63 /* Pods_loginGoogle_aula.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loginGoogle_aula.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E133591628821DC700BA6F81 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E133591828821DD300BA6F81 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		E1C5971A287F7D480091DF40 /* loginGoogle_aula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginGoogle_aula.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1C5971D287F7D480091DF40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1C5971F287F7D480091DF40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E1C59721287F7D480091DF40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E1C59724287F7D480091DF40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1C59727287F7D480091DF40 /* loginGoogle_aula.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = loginGoogle_aula.xcdatamodel; sourceTree = "<group>"; };
+		E1C59729287F7D4F0091DF40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1C5972C287F7D4F0091DF40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E1C5972E287F7D4F0091DF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1C59734287F83A30091DF40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1C59717287F7D480091DF40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12BD2C6440F79664F3514AF9 /* Pods_loginGoogle_aula.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31D0916713BB934C0EA84BAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEA8378FE285A9E446557D63 /* Pods_loginGoogle_aula.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59F1C16ED71761157B6F9D73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A0ED06040F113D481048AEA /* Pods-loginGoogle_aula.debug.xcconfig */,
+				7331AA0F36D201A1DF8B5DFD /* Pods-loginGoogle_aula.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1C59711287F7D470091DF40 = {
+			isa = PBXGroup;
+			children = (
+				E1C5971C287F7D480091DF40 /* loginGoogle_aula */,
+				E1C5971B287F7D480091DF40 /* Products */,
+				59F1C16ED71761157B6F9D73 /* Pods */,
+				31D0916713BB934C0EA84BAE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E1C5971B287F7D480091DF40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1C5971A287F7D480091DF40 /* loginGoogle_aula.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1C5971C287F7D480091DF40 /* loginGoogle_aula */ = {
+			isa = PBXGroup;
+			children = (
+				E1C5971D287F7D480091DF40 /* AppDelegate.swift */,
+				E1C5971F287F7D480091DF40 /* SceneDelegate.swift */,
+				E1C59721287F7D480091DF40 /* ViewController.swift */,
+				E1C59723287F7D480091DF40 /* Main.storyboard */,
+				E1C59729287F7D4F0091DF40 /* Assets.xcassets */,
+				E1C5972B287F7D4F0091DF40 /* LaunchScreen.storyboard */,
+				E1C5972E287F7D4F0091DF40 /* Info.plist */,
+				E1C59734287F83A30091DF40 /* GoogleService-Info.plist */,
+				E1C59726287F7D480091DF40 /* loginGoogle_aula.xcdatamodeld */,
+				E133591628821DC700BA6F81 /* LoginViewModel.swift */,
+				E133591828821DD300BA6F81 /* LoginService.swift */,
+			);
+			path = loginGoogle_aula;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1C59719287F7D480091DF40 /* loginGoogle_aula */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1C59731287F7D4F0091DF40 /* Build configuration list for PBXNativeTarget "loginGoogle_aula" */;
+			buildPhases = (
+				A5DD6F38F33CE4DA90350E80 /* [CP] Check Pods Manifest.lock */,
+				E1C59716287F7D480091DF40 /* Sources */,
+				E1C59717287F7D480091DF40 /* Frameworks */,
+				E1C59718287F7D480091DF40 /* Resources */,
+				DF05E10ABC2CD792EC1B1A9C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = loginGoogle_aula;
+			productName = loginGoogle_aula;
+			productReference = E1C5971A287F7D480091DF40 /* loginGoogle_aula.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1C59712287F7D470091DF40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					E1C59719287F7D480091DF40 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E1C59715287F7D470091DF40 /* Build configuration list for PBXProject "loginGoogle_aula" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1C59711287F7D470091DF40;
+			productRefGroup = E1C5971B287F7D480091DF40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1C59719287F7D480091DF40 /* loginGoogle_aula */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1C59718287F7D480091DF40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C5972D287F7D4F0091DF40 /* LaunchScreen.storyboard in Resources */,
+				E1C59735287F83A30091DF40 /* GoogleService-Info.plist in Resources */,
+				E1C5972A287F7D4F0091DF40 /* Assets.xcassets in Resources */,
+				E1C59725287F7D480091DF40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5DD6F38F33CE4DA90350E80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-loginGoogle_aula-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF05E10ABC2CD792EC1B1A9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loginGoogle_aula/Pods-loginGoogle_aula-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loginGoogle_aula/Pods-loginGoogle_aula-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-loginGoogle_aula/Pods-loginGoogle_aula-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1C59716287F7D480091DF40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C59722287F7D480091DF40 /* ViewController.swift in Sources */,
+				E133591928821DD300BA6F81 /* LoginService.swift in Sources */,
+				E1C59728287F7D480091DF40 /* loginGoogle_aula.xcdatamodeld in Sources */,
+				E1C5971E287F7D480091DF40 /* AppDelegate.swift in Sources */,
+				E133591728821DC700BA6F81 /* LoginViewModel.swift in Sources */,
+				E1C59720287F7D480091DF40 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E1C59723287F7D480091DF40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1C59724287F7D480091DF40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E1C5972B287F7D4F0091DF40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1C5972C287F7D4F0091DF40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E1C5972F287F7D4F0091DF40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E1C59730287F7D4F0091DF40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E1C59732287F7D4F0091DF40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A0ED06040F113D481048AEA /* Pods-loginGoogle_aula.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = loginGoogle_aula/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "teste.loginGoogle-aula";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E1C59733287F7D4F0091DF40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7331AA0F36D201A1DF8B5DFD /* Pods-loginGoogle_aula.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = loginGoogle_aula/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "teste.loginGoogle-aula";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1C59715287F7D470091DF40 /* Build configuration list for PBXProject "loginGoogle_aula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1C5972F287F7D4F0091DF40 /* Debug */,
+				E1C59730287F7D4F0091DF40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1C59731287F7D4F0091DF40 /* Build configuration list for PBXNativeTarget "loginGoogle_aula" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1C59732287F7D4F0091DF40 /* Debug */,
+				E1C59733287F7D4F0091DF40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E1C59726287F7D480091DF40 /* loginGoogle_aula.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E1C59727287F7D480091DF40 /* loginGoogle_aula.xcdatamodel */,
+			);
+			currentVersion = E1C59727287F7D480091DF40 /* loginGoogle_aula.xcdatamodel */;
+			path = loginGoogle_aula.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E1C59712287F7D470091DF40 /* Project object */;
+}

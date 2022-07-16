@@ -11,6 +11,7 @@ protocol PiadasViewModelDelegate {
     func exibePiadaSimples(descricaoDaPiada: String)
     func exibePiadaDupla(primeiraParteDaPiada: String, segundaParteDaPiada: String)
     func recarregaDados()
+    func exibeAlertaDePiadaRepetida()
 }
 
 class PiadasViewModel {
@@ -34,6 +35,30 @@ class PiadasViewModel {
     init() {
         carregaListaDePiadasSalvas()
     }
+   
+    func carregarPrimeiraPiada() {
+        sortearPiadaNova()
+    }
+    
+    func getTitulo(posicao: Int) -> String {
+        let piada = listaDePiadasSalvas[posicao]
+        // id - categoria - tipo
+        return "\(piada.id) - \(piada.categoria) - \(piada.tipo)"
+    }
+    
+    func sortearPiadaNova() {
+        service.getPiada { piada in
+            self.validarPiada(piada)
+        }
+    }
+    
+    func exibirPiada(posicao: Int) {
+        let piada = listaDePiadasSalvas[posicao]
+        
+        configuraPiada(piada)
+    }
+    
+    // MARK: métodos privados
     
     private func carregaListaDePiadasSalvas() {
         listaDePiadasSalvas = converterPiadasSalvas()
@@ -59,37 +84,33 @@ class PiadasViewModel {
         return piadas
     }
     
-    func carregarPrimeiraPiada() {
-        sortearPiadaNova()
-    }
-    
-    func getTitulo(posicao: Int) -> String {
-        let piada = listaDePiadasSalvas[posicao]
-        // id - categoria - tipo
-        return "\(piada.id) - \(piada.categoria) - \(piada.tipo)"
-    }
-    
-    func sortearPiadaNova() {
-        
-        service.getPiada { piada in
-            self.configuraPiada(piada)
-            
-            // salvar a piada na lista de piadas salvas
-            // exibir a nova piada salva na tableview
-            self.listaDePiadasSalvas.append(piada)
-            self.delegate?.recarregaDados()
-            
-            // salvar a lista de piadas no coreData
-            
-            self.coreDataService.adicionarPiadaNoCoreData(piada: piada)
-            
+    // verificar se a piada já foi sorteada
+    // se já foi sorteada, avisamos ao usuário com um alerta
+    // senao, seguimos as etapas anteriores
+    private func validarPiada(_ piada: Piada) {
+        let aPiadaEstaNaLista =  listaDePiadasSalvas.contains { piadaDaLista in
+            piadaDaLista.id == piada.id
         }
+        
+        if aPiadaEstaNaLista {
+            delegate?.exibeAlertaDePiadaRepetida()
+            return
+        }
+        
+        exibePiada(piada)
     }
     
-    func exibirPiada(posicao: Int) {
-        let piada = listaDePiadasSalvas[posicao]
-        
+    private func exibePiada(_ piada: Piada) {
         configuraPiada(piada)
+        
+        // salvar a piada na lista de piadas salvas
+        // exibir a nova piada salva na tableview
+        listaDePiadasSalvas.append(piada)
+        delegate?.recarregaDados()
+        
+        // salvar a lista de piadas no coreData
+        
+        coreDataService.adicionarPiadaNoCoreData(piada: piada)
     }
     
     private func configuraPiada(_ piada: Piada) {
@@ -101,7 +122,7 @@ class PiadasViewModel {
             
             guard let joke = piada.joke else { return }
             
-            self.delegate?.exibePiadaSimples(descricaoDaPiada: joke)
+            delegate?.exibePiadaSimples(descricaoDaPiada: joke)
             
         }
         
@@ -109,7 +130,7 @@ class PiadasViewModel {
             guard let setup = piada.setup,
                   let delivery = piada.delivery else { return }
             
-            self.delegate?.exibePiadaDupla(
+            delegate?.exibePiadaDupla(
                 primeiraParteDaPiada: setup,
                 segundaParteDaPiada: delivery
             )

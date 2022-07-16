@@ -73,5 +73,23 @@ extension ViewController: PiadasViewModelDelegate {
         piadasJaSorteadasTableView.reloadData()
     }
     
+    func exibeAlertaDePiadaRepetida() {
+        let alertVC = UIAlertController(
+            title: "Piada Repetida!",
+            message: "A piada solicitada já foi exibida",
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(
+            title: "Ok",
+            style: .default) { _ in
+                self.viewModel.sortearPiadaNova()
+            }
+        
+        alertVC.addAction(okAction)
+        
+        present(alertVC, animated: true)
+    }
+    
 }
 

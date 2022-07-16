@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginGoogle_aula" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ko9-U5-J8O" customClass="GIDSignInButton">
+                                <rect key="frame" x="157" y="822" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Pbu-mt-nYF"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yp6-3K-eDw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="loginGoogleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Myw-eA-3jf"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pn-by-c3t">
+                                <rect key="frame" x="157" y="754" width="100" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="A4y-Ia-Sb9"/>
+                                    <constraint firstAttribute="height" constant="30" id="Hhl-MN-ISk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ko9-U5-J8O" secondAttribute="bottom" constant="10" id="EPa-Lz-Hp6"/>
+                            <constraint firstItem="Ko9-U5-J8O" firstAttribute="top" secondItem="4Pn-by-c3t" secondAttribute="bottom" constant="38" id="Mnd-Zk-gxM"/>
+                            <constraint firstItem="Ko9-U5-J8O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="Sop-va-Zcl"/>
+                            <constraint firstItem="Ko9-U5-J8O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XAl-vm-exr"/>
+                            <constraint firstItem="Ko9-U5-J8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZV7-lz-lNS"/>
+                            <constraint firstItem="Ko9-U5-J8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="akN-rG-nCu"/>
+                            <constraint firstItem="4Pn-by-c3t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w3t-Yk-VvU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Sop-va-Zcl"/>
+                                <exclude reference="XAl-vm-exr"/>
+                                <exclude reference="ZV7-lz-lNS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="FBButtonPositionView" destination="4Pn-by-c3t" id="7J4-Px-HDD"/>
+                        <outlet property="signInButton" destination="Ko9-U5-J8O" id="vdP-k3-a67"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
