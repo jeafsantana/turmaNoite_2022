@@ -5,6 +5,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb349298623888578</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
@@ -13,6 +19,12 @@
 			</array>
 		</dict>
 	</array>
+	<key>FacebookAppID</key>
+	<string>349298623888578</string>
+	<key>FacebookClientToken</key>
+	<string>8dfbc3122b1e252be26edb8f0e605fcb</string>
+	<key>FacebookDisplayName</key>
+	<string>Login Google Aula</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -32,23 +44,5 @@
 			</array>
 		</dict>
 	</dict>
-    
-    
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb349298623888578</string>
-      </array>
-      </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>349298623888578</string>
-    <key>FacebookClientToken</key>
-    <string>8dfbc3122b1e252be26edb8f0e605fcb</string>
-    <key>FacebookDisplayName</key>
-    <string>Login Google Aula</string>
-    
 </dict>
 </plist>
